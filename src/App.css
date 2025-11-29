@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 5%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.header h1 {
+  margin-bottom: 12px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.header-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Network pills */
+.network-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  width: 100%;
+}
+
+.pill {
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: #222;
+  color: white;
+  transition: 0.2s;
+  flex: 1 1 auto; /* allows pills to shrink/grow */
+  text-align: center;
+  min-width: 80px;
+}
+
+.pill.active {
+  background: #3b82f6;
+}
+
+/* Buttons */
+.connect-btn,
+.disconnect-btn,
+.refresh-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  flex: 1 1 auto;
+  min-width: 120px;
+}
+
+.connect-btn {
+  background: #10b981;
+}
+
+.disconnect-btn {
+  background: #ef4444;
+}
+
+.refresh-btn {
+  margin-top: 12px;
+  background: #3b82f6;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* DASHBOARD */
+.dashboard {
+  padding: 20px 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.wallet-card h2,
+.token-card h2 {
+  margin-bottom: 12px;
+}
+
+.address {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 8px;
+}
+
+.usd {
+  margin-top: 4px;
+  color: #3b82f6;
+  font-size: 16px;
+}
+
+.placeholder-card {
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+  color: #aaa;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 5%;
+  }
+
+  .header-right {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .pill {
+    min-width: 100%;
+  }
+
+  .connect-btn,
+  .disconnect-btn {
+    width: 100%;
+  }
+
+  .dashboard {
+    padding: 15px 5%;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .wallet-card h1 {
+    font-size: 28px;
+  }
+
+  .usd {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wallet-card h1 {
+    font-size: 24px;
+  }
+
+  .usd {
+    font-size: 14px;
+  }
+
+  .pill {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .connect-btn,
+  .disconnect-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
